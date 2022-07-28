@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('test'){
           steps {
-              sh './gradlew bootBuildImage --imageName=zh/spring-boot-docker
-'
+              sh './gradlew bootBuildImage --imageName=zh/spring-boot-docker'
           }
         }
 
