@@ -1,17 +1,9 @@
 pipeline {
-    agent {
-      label 'docker'
-    }
+    agent any
     stages {
         stage('build') {
-            agent {
-               docker {
-                 label 'docker'
-                 image 'gradle:jdk17-alpine'
-               }
-            }
             steps {
-                sh 'gradle --version'
+                sh './gradlew assemble'
             }
         }
     }

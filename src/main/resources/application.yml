@@ -11,4 +11,6 @@ logging:
 com:
   zh:
     name: 曾浩
+server:
+  port: 9999
 #    type: com.zaxxer.hikari.HikariDataSource
