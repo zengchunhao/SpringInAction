@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage('test'){
+          steps {
+              sh './gradlew bootBuildImage --imageName=zh/spring-boot-docker
+'
+          }
+        }
+
         stage('build') {
             steps {
-                sh './gradlew assemble'
+                sh './gradlew bootJar'
             }
         }
 
