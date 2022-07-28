@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('test'){
-          steps {
-              sh './gradlew bootBuildImage --imageName=zh/spring-boot-docker'
-          }
-        }
+//         stage('test'){
+//           steps {
+//               sh './gradlew bootBuildImage --imageName=zh/spring-boot-docker'
+//           }
+//         }
 
         stage('build') {
             steps {
@@ -15,7 +15,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-              sh 'scp build/libs/*.jar root@test:/home'
+              sh 'scp build/libs/*.jar zh@tc:/home/zh/java'
             }
         }
     }
