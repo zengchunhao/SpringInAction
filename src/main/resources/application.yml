@@ -1,0 +1,14 @@
+logging:
+  level:
+    tacos: debug
+    web: debug
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://124.223.167.165:3306/test
+#    username: root
+#    password: gEoMqYwQ.iA@yNczWUgPv6!E
+com:
+  zh:
+    name: 曾浩
+#    type: com.zaxxer.hikari.HikariDataSource
